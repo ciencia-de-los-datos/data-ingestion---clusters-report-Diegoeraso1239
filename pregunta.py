@@ -40,7 +40,7 @@ def load_rows():
 
   one_line_data = []
   ready_data = []
-  row_data = load_and_preprocess('clusters_report')
+  row_data = load_and_preprocess()
   row_data = row_data[4:]
   row_data.append(' ')
   row_data = [re.sub('                      +','*',line) for line in row_data]
