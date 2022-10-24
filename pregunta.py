@@ -81,5 +81,5 @@ def ingest_data():
     columns = load_headers()
     rows = load_rows()
     df = pd.DataFrame(rows,columns=columns)
- 
+    df.cluster = df.cluster.astype(int) 
     return df
