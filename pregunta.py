@@ -78,8 +78,10 @@ def load_rows():
 
 
 def ingest_data():
-    columns = load_headers()
-    rows = load_rows()
-    df = pd.DataFrame(rows,columns=columns)
-    df.cluster = df.cluster.astype(int) 
-    return df
+  columns = load_headers()
+  rows = load_rows()
+  df = pd.DataFrame(rows,columns=columns)
+  df.cantidad_de_palabras_clave = df.cantidad_de_palabras_clave.astype(int)
+  df.porcentaje_de_palabras_clave = df.porcentaje_de_palabras_clave.astype(int)
+  df.cluster = df.cluster.astype(int) 
+  return df
