@@ -83,5 +83,5 @@ def ingest_data():
   df = pd.DataFrame(rows,columns=columns)
   df.cantidad_de_palabras_clave = df.cantidad_de_palabras_clave.astype(int)
   df.porcentaje_de_palabras_clave = df.porcentaje_de_palabras_clave.astype(int)
-  df.cluster = df.cluster.astype(int) 
+  df.cluster = df.cluster.astype(float) 
   return df
